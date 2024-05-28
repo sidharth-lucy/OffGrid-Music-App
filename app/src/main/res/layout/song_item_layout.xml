@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_song_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="@color/black"
+    android:background="@drawable/song_list_item_border"
+    android:paddingVertical="5dp"
+    android:paddingHorizontal="6dp"
+    android:layout_marginBottom="4dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_music_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/music_dancing_disco_1"
+        android:tint="@color/white"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_song_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/iv_music_icon"
+        app:layout_constraintBottom_toBottomOf="@id/iv_music_icon"
+        app:layout_constraintStart_toEndOf="@id/iv_music_icon"
+        app:layout_constraintEnd_toStartOf="@+id/v_dummy_view"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp">
+
+        <TextView
+            android:id="@+id/tv_song_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In The Name Of Love (Official Video) - YouTube (Official Video) - YouTube"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="casual"
+            android:textFontWeight="900"
+            android:textSize="13dp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/tv_song_time_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.40 by: Sidh"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="cursive"
+            android:textFontWeight="700"
+            android:textSize="8dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_dummy_view"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ll_song_detail"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_play_music_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ll_song_detail"
+        app:srcCompat="@drawable/play"
+        android:padding="7dp"
+        tools:tint="@color/white"
+        tools:visibility="visible"
+        />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lv_play_music_lottie"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ll_song_detail"
+        app:lottie_fileName="playing_song_anim"
+        android:visibility="gone"
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
